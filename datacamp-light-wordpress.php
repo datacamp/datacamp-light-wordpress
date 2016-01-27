@@ -126,7 +126,30 @@ class DataCampLight {
 		self::addShortCode('datacamp_exercise', 'datacampExerciseSC');
 	}
 
+	public static function showMediaButton() {
+		echo '<a href="" class="button"' .
+				'id="insert-datacamp-exercise-button" title="' . __("Insert DataCamp Exercise", 'add_datacamp_exercise') . '">' .
+				'Add Exercise' .
+			'</a>';
+	}
+
+	public static function includeMediaButton() {
+		include(plugin_dir_path(__FILE__) . 'includes/MediaButtonPopup.php');
+
+		wp_enqueue_style( 'wp-jquery-ui-dialog' );
+		wp_enqueue_script('jquery-ui-dialog');
+
+		wp_enqueue_script('datacamp_media_button_popup', plugins_url('js/mediaButtonPopup.js', __FILE__), array('jquery'));
+		wp_enqueue_style('datacamp_media_button_popup', plugins_url('style/media_button_popup.css', __FILE__));
+	}
+
+	private static function setMediaButton() {
+		add_action('media_buttons',  array(__CLASS__, 'showMediaButton'), 15);
+		add_action('wp_enqueue_media', array(__CLASS__, 'includeMediaButton'));
+	}
+
 	public static function run() {
+		self::setMediaButton();
 		self::setShortCodes();
 		self::loadJS();
 	}
