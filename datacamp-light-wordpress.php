@@ -134,12 +134,12 @@ class DataCampLight {
 	}
 
 	public static function includeMediaButton() {
-		include(plugin_dir_path(__FILE__) . 'includes/MediaButtonPopup.php');
+		include(plugin_dir_path(__FILE__) . 'includes/media_button_popup.php');
 
 		wp_enqueue_style( 'wp-jquery-ui-dialog' );
 		wp_enqueue_script('jquery-ui-dialog');
 
-		wp_enqueue_script('datacamp_media_button_popup', plugins_url('js/mediaButtonPopup.js', __FILE__), array('jquery'));
+		wp_enqueue_script('datacamp_media_button_popup', plugins_url('js/media_button_popup.js', __FILE__), array('jquery'));
 		wp_enqueue_style('datacamp_media_button_popup', plugins_url('style/media_button_popup.css', __FILE__));
 	}
 

@@ -57,8 +57,10 @@ jQuery(function($) {
 	$(document).ready(function(){
 		var dialog = $("#datacamp-media-button-popup").dialog({
 			autoOpen: false,
-			height: 600,
-			width: 800,
+			minHeight: 400,
+			minWidth: 600,
+			height: $(window).height() * 0.9,
+			width: $(window).width() * 0.6,
 			modal: true,
 			buttons: [
 				{
@@ -67,6 +69,13 @@ jQuery(function($) {
 					click : function () {
 						processAddDataCampExerciseForm($(this));
 						$(this).dialog("close");
+					}
+				},
+				{
+					text : "Reset Fields",
+					class : "button",
+					click : function () {
+						$(this).find("form").get(0).reset();
 					}
 				},
 				{
