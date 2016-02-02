@@ -94,7 +94,7 @@ class DataCampLight {
 	}
 
 	public static function hintSC($atts, $content) {
-		return '<p data-type="hint">' . $content .  '</p>';
+		return '<div data-type="hint">' . $content .  '</div>';
 	}
 
 	private static function addShortCode($name, $functionName){
