@@ -14,13 +14,14 @@ Author URI: https://www.datacamp.com/
 if (!defined('ABSPATH')) exit;
 
 class DataCampLight {
-	public static function loadJS(){
+	public static function loadJSAndStyle(){
 		// wp_enqueue_scripts action hook to link only on the front-end
-		add_action("wp_enqueue_scripts", array(__CLASS__, "loadJSHook"));
+		add_action("wp_enqueue_scripts", array(__CLASS__, "loadJSAndStyleHook"));
 	}
 
-	public static function loadJSHook(){
-		wp_enqueue_script("datacamp-light-library", "https://cdn.datacamp.com/datacamp-light-latest.min.js");
+	public static function loadJSAndStyleHook(){
+		wp_enqueue_style("datacamp-light-style", plugins_url('style/frontend_style.css', __FILE__));
+		wp_enqueue_script("datacamp-light-library", "https://cdn.datacamp.com/datacamp-light-latest.min.js", array(), false, true);
 	}
 
 	/**
@@ -151,7 +152,7 @@ class DataCampLight {
 	public static function run() {
 		self::setMediaButton();
 		self::setShortCodes();
-		self::loadJS();
+		self::loadJSAndStyle();
 	}
 }
 
