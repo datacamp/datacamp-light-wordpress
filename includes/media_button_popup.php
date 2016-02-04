@@ -27,5 +27,22 @@
             <label for="datacamp-hint">Hint</label>
             <textarea rows="3" name="datacamp-hint" id="datacamp-hint"></textarea>
         </fieldset>
+        <div class="datacamp-height-settings">
+            <fieldset>
+                <label for="datacamp-height">Height</label>
+                <input name="datacamp-height" id="datacamp-height"></textarea>
+                <span>px</span>
+            </fieldset>
+            <fieldset>
+                <label for="datacamp-min-height">Min Height</label>
+                <input name="datacamp-min-height" id="datacamp-min-height"></textarea>
+                <span>px</span>
+            </fieldset>
+            <fieldset>
+                <label for="datacamp-max-height">Max Height</label>
+                <input name="datacamp-max-height" id="datacamp-max-height"></textarea>
+                <span>px</span>
+            </fieldset>
+        </div>
     </form>
 </div>

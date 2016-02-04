@@ -19,15 +19,26 @@ jQuery(function($) {
 		return result;
 	}
 
+	function createAttribute(dialog, name, idPart) {
+		var value = $.trim(dialog.find("#datacamp-" + idPart).val());
+		if (!value)
+			return "";
+		return ' ' + name + '="' + value + '"';
+	}
+
 	function processAddDataCampExerciseForm(dialog) {
-		var programmingLanguage = dialog.find("#datacamp-programming-language").val();
 		var pec = dialog.find("#datacamp-pre-exercise-code").val();
 		var sampleCode = dialog.find("#datacamp-sample-code").val();
 		var solution = dialog.find("#datacamp-solution").val();
 		var sct = dialog.find("#datacamp-sct").val();
 		var hint = dialog.find("#datacamp-hint").val();
 
-		var output = '[datacamp_exercise lang="' + programmingLanguage + '"]\n';
+		var output = '[datacamp_exercise'
+		output += createAttribute(dialog, "lang", "programming-language");
+		output += createAttribute(dialog, "height", "height");
+		output += createAttribute(dialog, "min-height", "min-height");
+		output += createAttribute(dialog, "max-height", "max-height");
+		output += ']\n';
 
 		output += indent + "[datacamp_pre_exercise_code]\n";
 		output += doIndent(pec, 2);

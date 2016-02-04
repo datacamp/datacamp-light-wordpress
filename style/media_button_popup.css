@@ -6,3 +6,13 @@
 .datacamp-media-button-popup textarea {
 	width: 100%;
 }
+
+.datacamp-media-button-popup .datacamp-height-settings label {
+	width: 80px;
+	display: inline-block;
+}
+
+.datacamp-media-button-popup .datacamp-height-settings input {
+	width: 80px;
+	margin-right: 5px;
+}
