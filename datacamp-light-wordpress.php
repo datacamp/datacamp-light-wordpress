@@ -5,8 +5,7 @@
  */
 /*
 Plugin Name: DataCamp Light
-Description: This plugin allows easy embedding of programming exercises using the DataCamp Light interactive coding interface.
-Author: DataCamp
+Description: This plugin allows easy integration of the DataCamp Light interactive learning widget into posts and pages.
 Version: 1.0
 Author URI: https://www.datacamp.com/
 */
@@ -66,13 +65,22 @@ class DataCampLight {
 		return $new_content;
 	}
 
+	private static function createDataAttribute($atts, $key) {
+		if (isset($atts[$key])) {
+			return ' data-' . $key . '="' . $atts[$key] . '"';
+		}
+		return "";
+	}
+
 
 	public static function datacampExerciseSC($atts, $content, $tag) {
-		$atts = shortcode_atts(array(
-			'lang' => '',
-		), $atts);
 		return '[' . $tag . ']'
-				. '<div data-datacamp-exercise data-lang="' . $atts['lang'] . '">'
+				. '<div data-datacamp-exercise'
+					. self::createDataAttribute($atts, 'lang')
+					. self::createDataAttribute($atts, 'height')
+					. self::createDataAttribute($atts, 'min-height')
+					. self::createDataAttribute($atts, 'max-height')
+				. '>'
 					. do_shortcode($content)
 				. '</div>'
 			. '[/' . $tag . ']';
