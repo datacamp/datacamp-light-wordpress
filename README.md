@@ -11,19 +11,19 @@ To install the Plugin using the Wordpress Administration Dashboard first downloa
 
 Next, go to your Wordpress Administration Dashboard and look for the Plugin section in the menu on the left side. Once opened click on "Add New".
 
-![Installation Instruction 1](http://assets.datacamp.com/img/github/datacamp-light-wordpress/installation_1.png "Installation Instruction 1")
+![Installation Instruction 1](http://assets.datacamp.com/img/github/datacamp-light-wordpress/installation1.png "Installation Instruction 1")
 
 At the top of the page you can now click the "Upload Plugin" button.
 
-![Installation Instruction 2](http://assets.datacamp.com/img/github/datacamp-light-wordpress/installation_2.png "Installation Instruction 2")
+![Installation Instruction 2](http://assets.datacamp.com/img/github/datacamp-light-wordpress/installation2.png "Installation Instruction 2")
 
 Now open the file browser and look for the downloaded zip file containing the plugin. If done correctly the page should look like the screenshot below (with possibly a different version number). Click "Install Now".
 
-![Installation Instruction 3](http://assets.datacamp.com/img/github/datacamp-light-wordpress/installation_3.png "Installation Instruction 3")
+![Installation Instruction 3](http://assets.datacamp.com/img/github/datacamp-light-wordpress/installation3.png "Installation Instruction 3")
 
 Congratulations! You've successfully installed the Plugin. You can now activate it.
 
-![Installation Instruction 4](http://assets.datacamp.com/img/github/datacamp-light-wordpress/installation_4.png "Installation Instruction 4")
+![Installation Instruction 4](http://assets.datacamp.com/img/github/datacamp-light-wordpress/installation4.png "Installation Instruction 4")
 
 ### FTP (Advanced)
 
@@ -56,7 +56,7 @@ After clicking "Insert Exercise", the exercise information will be translated in
 
   [/datacamp_sample_code]
   [datacamp_pre_exercise_code]
-    # This will get executed each time the exercise gets initialized
+    # This will get executed each time the exercise gets initialised
     b = 6
   [/datacamp_pre_exercise_code]
   [datacamp_solution]
