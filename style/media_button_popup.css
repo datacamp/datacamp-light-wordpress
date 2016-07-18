@@ -1,18 +1,18 @@
 .datacamp-media-button-popup fieldset {
-	width: 100%;
-	margin-top: 20px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .datacamp-media-button-popup textarea {
-	width: 100%;
+    width: 100%;
 }
 
 .datacamp-media-button-popup .datacamp-height-settings label {
-	width: 80px;
-	display: inline-block;
+    width: 80px;
+    display: inline-block;
 }
 
 .datacamp-media-button-popup .datacamp-height-settings input {
-	width: 80px;
-	margin-right: 5px;
+    width: 80px;
+    margin-right: 5px;
 }
