@@ -1,8 +1,18 @@
 jQuery(function($) {
+
+    function htmlEscape(str) {
+        return str
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    }
+
     var indent = "    ";
 
     function doIndent(text, indentNumber) {
-        var result = ""
+        var result = "";
         var splitted = text.split(/\r?\n/);
         for (var i = 0; i < splitted.length ;i++) {
             if (splitted[i] !== "") {
@@ -33,7 +43,7 @@ jQuery(function($) {
         var sct = dialog.find("#datacamp-sct").val();
         var hint = dialog.find("#datacamp-hint").val();
 
-        var output = '[datacamp_exercise'
+        var output = '[datacamp_exercise';
         output += createAttribute(dialog, "lang", "programming-language");
         output += createAttribute(dialog, "height", "height");
         output += createAttribute(dialog, "min-height", "min-height");
@@ -61,8 +71,7 @@ jQuery(function($) {
         output += indent + "[/datacamp_hint]\n";
 
         output += '[/datacamp_exercise]';
-
-        window.send_to_editor(output);
+        window.send_to_editor(htmlEscape(output));
     }
 
     $(document).ready(function(){
