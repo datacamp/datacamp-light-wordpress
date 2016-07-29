@@ -84,6 +84,6 @@ You can now preview or publish your page or post! It is possible to embed multip
 
 ### Note
 
-It is recommended that you use the Text version of the WordPress editor while making use of this plugin. This can be set in the top right corner of the editor. If you make use of multiple empty lines somewhere in your exercise code, switching to the Visual editor might cause them to be replaced by a single empty line.
+It is recommended that you use the Text version of the WordPress editor while making use of this plugin. This can be set in the top right corner of the editor. If you make use extra whitespace or multiple empty lines somewhere in your exercise code, switching to the Visual editor might cause them to be replaced or disappear.
 
 ![Usage Text Editor](http://assets.datacamp.com/img/github/datacamp-light-wordpress/usage_text_editor.png "Usage Text Editor")

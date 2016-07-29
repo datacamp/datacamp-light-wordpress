@@ -1,5 +1,5 @@
 div[data-datacamp-exercise] > code,
 div[data-datacamp-exercise] > div,
 div[data-datacamp-exercise] > p {
-	display: none;
+    display: none;
 }

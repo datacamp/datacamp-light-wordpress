@@ -30,17 +30,17 @@
         <div class="datacamp-height-settings">
             <fieldset>
                 <label for="datacamp-height">Height</label>
-                <input name="datacamp-height" id="datacamp-height"></textarea>
+                <input name="datacamp-height" id="datacamp-height">
                 <span>px</span>
             </fieldset>
             <fieldset>
                 <label for="datacamp-min-height">Min Height</label>
-                <input name="datacamp-min-height" id="datacamp-min-height"></textarea>
+                <input name="datacamp-min-height" id="datacamp-min-height">
                 <span>px</span>
             </fieldset>
             <fieldset>
                 <label for="datacamp-max-height">Max Height</label>
-                <input name="datacamp-max-height" id="datacamp-max-height"></textarea>
+                <input name="datacamp-max-height" id="datacamp-max-height">
                 <span>px</span>
             </fieldset>
         </div>
