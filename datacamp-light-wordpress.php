@@ -20,7 +20,7 @@ class DataCampLight {
 
     public static function loadJSAndStyleHook(){
         wp_enqueue_style("datacamp-light-style", plugins_url('style/frontend_style.css', __FILE__));
-        wp_enqueue_script("datacamp-light-library", "https://cdn.datacamp.com/datacamp-light-latest.min.js", array(), false, true);
+        wp_enqueue_script("datacamp-light-library", "//cdn.datacamp.com/dcl-react.js.gz", array(), false, true);
     }
 
     /**
