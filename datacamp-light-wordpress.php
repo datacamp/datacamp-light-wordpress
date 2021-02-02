@@ -72,6 +72,12 @@ class DataCampLight {
         return "";
     }
 
+    private static function createAttribute($atts, $key) {
+        if (isset($atts[$key])) {
+            return $key . '="' . $atts[$key] . '"';
+        }
+        return "";
+    }
 
     public static function datacampExerciseSC($atts, $content, $tag) {
         return '[' . $tag . ']'
@@ -80,6 +86,7 @@ class DataCampLight {
                 . self::createDataAttribute($atts, 'height')
                     . self::createDataAttribute($atts, 'min-height')
                         . self::createDataAttribute($atts, 'max-height')
+			    . self::createAttribute($atts, 'id')
                             . '>'
                             . do_shortcode($content)
                             . '</div>'
