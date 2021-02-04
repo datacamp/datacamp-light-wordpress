@@ -87,10 +87,11 @@ class DataCampLight {
                     . self::createDataAttribute($atts, 'min-height')
                         . self::createDataAttribute($atts, 'max-height')
 			    . self::createAttribute($atts, 'id')
-                            . '>'
-                            . do_shortcode($content)
-                            . '</div>'
-                            . '[/' . $tag . ']';
+				. self::createDataAttribute($atts, 'show-run-button')
+				    . '>'
+				    . do_shortcode($content)
+				    . '</div>'
+				    . '[/' . $tag . ']';
     }
 
     public static function pecSC($atts, $content) {
