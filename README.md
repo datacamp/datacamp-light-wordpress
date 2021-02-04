@@ -46,7 +46,7 @@ After clicking "Insert Exercise", the exercise information will be translated in
 ![Usage Add Shortcode](http://assets.datacamp.com/img/github/datacamp-light-wordpress/usage_add_shortcode.png "Usage Add Shortcode")
 
 ```Python
-[datacamp_exercise lang="python"]
+[datacamp_exercise lang="python" id="test1" show-run-button=TRUE]
   [datacamp_sample_code]
     # Create a variable a, equal to 5
 
