@@ -20,7 +20,7 @@ class DataCampLight {
 
     public static function loadJSAndStyleHook(){
         wp_enqueue_style("datacamp-light-style", plugins_url('style/frontend_style.css', __FILE__));
-        wp_enqueue_script("datacamp-light-library", "https://cdn.datacamp.com/datacamp-light-latest.min.js", array(), false, true);
+        wp_enqueue_script("datacamp-light-library", "https://cdn.datacamp.com/dcl-react.js.gz", array(), false, true);
     }
 
     /**
@@ -72,6 +72,12 @@ class DataCampLight {
         return "";
     }
 
+    private static function createAttribute($atts, $key) {
+        if (isset($atts[$key])) {
+            return $key . '="' . $atts[$key] . '"';
+        }
+        return "";
+    }
 
     public static function datacampExerciseSC($atts, $content, $tag) {
         return '[' . $tag . ']'
@@ -80,10 +86,12 @@ class DataCampLight {
                 . self::createDataAttribute($atts, 'height')
                     . self::createDataAttribute($atts, 'min-height')
                         . self::createDataAttribute($atts, 'max-height')
-                            . '>'
-                            . do_shortcode($content)
-                            . '</div>'
-                            . '[/' . $tag . ']';
+			    . self::createAttribute($atts, 'id')
+				. self::createDataAttribute($atts, 'show-run-button')
+				    . '>'
+				    . do_shortcode($content)
+				    . '</div>'
+				    . '[/' . $tag . ']';
     }
 
     public static function pecSC($atts, $content) {
